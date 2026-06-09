@@ -46,9 +46,14 @@ export function Contact() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+  const [isSending, setIsSending] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+     if (isSending) return;
+
+     setIsSending(true);
 
     try {
       await emailjs.send(
@@ -67,6 +72,8 @@ export function Contact() {
     } catch (error) {
       console.error(error);
       alert("Failed to send message");
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -281,6 +288,7 @@ export function Contact() {
                 />
                 <button
                   type="submit"
+                  disabled={isSending}
                   style={{
                     width: "100%",
                     padding: "1rem",
@@ -309,7 +317,8 @@ export function Contact() {
                     el.style.transform = "";
                   }}
                 >
-                  <Send size={18} /> Send Message
+                  <Send size={18} /> 
+                  {isSending ? "Sending..." : "Send Message"}
                 </button>
               </form>
             )}
