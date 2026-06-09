@@ -29,7 +29,7 @@ export function Experience() {
                   Aptitude Guru
                 </span>
                 <span style={{ border: "1px solid var(--accent-purple)", borderRadius: 20, padding: "2px 12px", fontSize: "0.8rem", color: "var(--accent-purple)", fontFamily: "var(--font-mono)" }}>
-                  Jun 2024 – Jul 2024
+                  May 2026 – June 2026
                 </span>
               </div>
 
@@ -40,7 +40,7 @@ export function Experience() {
                   Full-Stack Developer Intern
                 </span>
                 <span style={{ display: "flex", alignItems: "center", gap: "4px", color: "var(--text-secondary)", fontSize: "0.85rem" }}>
-                  <MapPin size={14} /> Bhopal, India (Remote)
+                  <MapPin size={14} /> Bhopal, India (On-site)
                 </span>
               </div>
 
