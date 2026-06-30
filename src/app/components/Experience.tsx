@@ -26,7 +26,7 @@ export function Experience() {
               {/* Header */}
               <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.75rem" }}>
                 <span style={{ fontFamily: "var(--font-heading)", fontSize: "1.2rem", fontWeight: 700 }}>
-                  Aptitude Guru
+                  Netlink Software Pvt. Ltd.
                 </span>
                 <span style={{ border: "1px solid var(--accent-purple)", borderRadius: 20, padding: "2px 12px", fontSize: "0.8rem", color: "var(--accent-purple)", fontFamily: "var(--font-mono)" }}>
                   May 2026 – June 2026

@@ -6,62 +6,83 @@ const PROJECTS = [
   {
     id: 1,
     title: "PTE Exam Preparation Platform",
-    badge: "Full Stack · Internship",
+    badge: "Full Stack · Featured Project",
     featured: true,
     gradient: "linear-gradient(135deg, #6c63ff, #00d4ff)",
-    description: "A comprehensive end-to-end exam preparation platform for PTE (Pearson Test of English) with role-based access, real-time notifications, and CI/CD deployment. Built during a 45-day internship.",
+    description: "A full-stack web application built to help students prepare for the PTE Academic exam through realistic practice tests across Speaking, Writing, Reading, and Listening modules.",
     highlights: [
-      "Implemented Google OAuth + JWT authentication with role-based access control",
-      "Integrated Firebase Cloud Messaging for real-time push notifications",
-      "Achieved 90%+ code coverage with SonarQube quality gates in CI/CD pipeline",
+      "Developed a complete exam simulation platform with timed sections, navigation controls, and automated scoring workflows.",
+      "Built secure REST APIs with role-based authentication using Firebase Authentication.",
+      "Designed and managed question banks, user responses, and test data using MySQL and Snowflake.",
+      "Integrated GitHub Actions for CI/CD and SonarQube for continuous code quality analysis.",
+      "Deployed the frontend on GitHub Pages and the backend on Render.",
     ],
-    tech: ["React.js", "TypeScript", "Node.js", "Express.js", "MySQL", "Snowflake", "JWT", "Google OAuth", "Firebase FCM", "GitHub Actions", "SonarQube", "Render"],
+    tech: [
+      "React.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "Snowflake",
+      "Firebase Authentication",
+      "JWT",
+      "GitHub Actions",
+      "SonarQube",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Nginx"
+    ],
     github: "#",
     demo: "#",
   },
   {
     id: 2,
-    title: "Real-Time Chat Application",
-    badge: "Full Stack · Personal",
+    title: "AI-Powered Content Automation Platform",
+    badge: "AI · Full Stack",
     featured: false,
-    gradient: "linear-gradient(135deg, #ff6b6b, #feca57)",
-    description: "A WhatsApp-inspired real-time messaging app with WebSocket communication, user rooms, and message persistence.",
-    tech: ["React.js", "Node.js", "Socket.io", "MongoDB", "Express.js"],
+    gradient: "linear-gradient(135deg, #a29bfe, #ff7675)",
+    description: "A web platform that streamlines content creation using AI-powered image generation while providing a scalable and modular architecture for future enhancements.",
+    highlights: [
+      "Developed responsive frontend interfaces for an intuitive user experience.",
+      "Integrated backend services for efficient image generation workflows and data handling.",
+      "Designed a modular architecture to simplify feature expansion and long-term maintenance.",
+      "Focused on clean code structure and scalable application design."
+    ],
+    tech: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "AI Image Generation API",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
     github: "#",
     demo: "#",
   },
   {
     id: 3,
-    title: "AWS Cloud Infrastructure",
-    badge: "Cloud · DevOps",
+    title: "Production-Ready Web Application Deployment",
+    badge: "Cloud & DevOps",
     featured: false,
-    gradient: "linear-gradient(135deg, #f9ca24, #f0932b)",
-    description: "Designed and deployed a scalable multi-tier cloud architecture on AWS with VPC, EC2, S3, IAM roles, and Nginx reverse proxy configuration.",
-    tech: ["AWS EC2", "AWS S3", "AWS VPC", "AWS IAM", "Docker", "Nginx", "Linux"],
+    gradient: "linear-gradient(135deg, #20bf6b, #0984e3)",
+    description: "Configured and deployed a production-style web application environment using Nginx and MySQL while implementing industry-standard deployment practices.",
+    highlights: [
+      "Configured Nginx as a reverse proxy for application hosting.",
+      "Integrated MySQL with the backend for persistent data storage.",
+      "Structured deployment pipelines and server configuration following production practices.",
+      "Gained hands-on experience with web hosting, server configuration, and application deployment."
+    ],
+    tech: [
+      "Nginx",
+      "MySQL",
+      "Linux",
+      "Docker",
+      "Node.js",
+      "GitHub"
+    ],
     github: "#",
-    demo: "#",
-  },
-  {
-    id: 4,
-    title: "Student Dashboard Portal",
-    badge: "Frontend · React",
-    featured: false,
-    gradient: "linear-gradient(135deg, #a29bfe, #6c5ce7)",
-    description: "A dynamic student management dashboard with grade tracking, attendance visualization, and course enrollment features.",
-    tech: ["React.js", "TypeScript", "Chart.js", "CSS Modules"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    id: 5,
-    title: "ML Sentiment Analyzer",
-    badge: "Machine Learning · Python",
-    featured: false,
-    gradient: "linear-gradient(135deg, #00b894, #00cec9)",
-    description: "A sentiment analysis tool trained on social media data using NLP techniques, with a Flask API and interactive web interface.",
-    tech: ["Python", "scikit-learn", "NLTK", "Flask", "React.js"],
-    github: "#",
-    demo: "#",
   },
 ];
 
@@ -117,22 +138,26 @@ export function Projects() {
                   {featured.tech.map((t) => <span key={t} className="tech-pill">{t}</span>)}
                 </div>
                 <div style={{ display: "flex", gap: "0.75rem" }}>
-                  <a href={featured.github} target="_blank" rel="noreferrer"
-                    style={{ display: "flex", alignItems: "center", gap: "6px", padding: "0.5rem 1rem",
-                      border: "1px solid var(--border-subtle)", borderRadius: 8, color: "var(--text-secondary)",
-                      textDecoration: "none", fontSize: "0.85rem", transition: "border-color 0.2s, color 0.2s" }}
-                    onMouseEnter={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = "var(--accent-purple)"; el.style.color = "var(--text-primary)"; }}
-                    onMouseLeave={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = "var(--border-subtle)"; el.style.color = "var(--text-secondary)"; }}>
-                    <Github size={16} /> Code
-                  </a>
-                  <a href={featured.demo} target="_blank" rel="noreferrer"
-                    style={{ display: "flex", alignItems: "center", gap: "6px", padding: "0.5rem 1rem",
-                      border: "1px solid var(--border-subtle)", borderRadius: 8, color: "var(--text-secondary)",
-                      textDecoration: "none", fontSize: "0.85rem", transition: "border-color 0.2s, color 0.2s" }}
-                    onMouseEnter={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = "var(--accent-cyan)"; el.style.color = "var(--text-primary)"; }}
-                    onMouseLeave={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = "var(--border-subtle)"; el.style.color = "var(--text-secondary)"; }}>
-                    <ExternalLink size={16} /> Demo
-                  </a>
+                  {featured.github && (
+                    <a href={featured.github} target="_blank" rel="noreferrer"
+                      style={{ display: "flex", alignItems: "center", gap: "6px", padding: "0.5rem 1rem",
+                        border: "1px solid var(--border-subtle)", borderRadius: 8, color: "var(--text-secondary)",
+                        textDecoration: "none", fontSize: "0.85rem", transition: "border-color 0.2s, color 0.2s" }}
+                      onMouseEnter={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = "var(--accent-purple)"; el.style.color = "var(--text-primary)"; }}
+                      onMouseLeave={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = "var(--border-subtle)"; el.style.color = "var(--text-secondary)"; }}>
+                      <Github size={16} /> Code
+                    </a>
+                  )}
+                  {featured.demo && (
+                    <a href={featured.demo} target="_blank" rel="noreferrer"
+                      style={{ display: "flex", alignItems: "center", gap: "6px", padding: "0.5rem 1rem",
+                        border: "1px solid var(--border-subtle)", borderRadius: 8, color: "var(--text-secondary)",
+                        textDecoration: "none", fontSize: "0.85rem", transition: "border-color 0.2s, color 0.2s" }}
+                      onMouseEnter={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = "var(--accent-cyan)"; el.style.color = "var(--text-primary)"; }}
+                      onMouseLeave={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = "var(--border-subtle)"; el.style.color = "var(--text-secondary)"; }}>
+                      <ExternalLink size={16} /> Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -156,22 +181,26 @@ export function Projects() {
                   {project.tech.map((t) => <span key={t} className="tech-pill">{t}</span>)}
                 </div>
                 <div style={{ display: "flex", gap: "0.75rem" }}>
-                  <a href={project.github} target="_blank" rel="noreferrer"
-                    style={{ display: "flex", alignItems: "center", gap: "6px", padding: "0.4rem 0.8rem",
-                      border: "1px solid var(--border-subtle)", borderRadius: 6, color: "var(--text-secondary)",
-                      textDecoration: "none", fontSize: "0.8rem", transition: "all 0.2s" }}
-                    onMouseEnter={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = "var(--accent-purple)"; el.style.color = "var(--text-primary)"; }}
-                    onMouseLeave={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = "var(--border-subtle)"; el.style.color = "var(--text-secondary)"; }}>
-                    <Github size={14} /> Code
-                  </a>
-                  <a href={project.demo} target="_blank" rel="noreferrer"
-                    style={{ display: "flex", alignItems: "center", gap: "6px", padding: "0.4rem 0.8rem",
-                      border: "1px solid var(--border-subtle)", borderRadius: 6, color: "var(--text-secondary)",
-                      textDecoration: "none", fontSize: "0.8rem", transition: "all 0.2s" }}
-                    onMouseEnter={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = "var(--accent-cyan)"; el.style.color = "var(--text-primary)"; }}
-                    onMouseLeave={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = "var(--border-subtle)"; el.style.color = "var(--text-secondary)"; }}>
-                    <ExternalLink size={14} /> Demo
-                  </a>
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noreferrer"
+                      style={{ display: "flex", alignItems: "center", gap: "6px", padding: "0.4rem 0.8rem",
+                        border: "1px solid var(--border-subtle)", borderRadius: 6, color: "var(--text-secondary)",
+                        textDecoration: "none", fontSize: "0.8rem", transition: "all 0.2s" }}
+                      onMouseEnter={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = "var(--accent-purple)"; el.style.color = "var(--text-primary)"; }}
+                      onMouseLeave={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = "var(--border-subtle)"; el.style.color = "var(--text-secondary)"; }}>
+                      <Github size={14} /> Code
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a href={project.demo} target="_blank" rel="noreferrer"
+                      style={{ display: "flex", alignItems: "center", gap: "6px", padding: "0.4rem 0.8rem",
+                        border: "1px solid var(--border-subtle)", borderRadius: 6, color: "var(--text-secondary)",
+                        textDecoration: "none", fontSize: "0.8rem", transition: "all 0.2s" }}
+                      onMouseEnter={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = "var(--accent-cyan)"; el.style.color = "var(--text-primary)"; }}
+                      onMouseLeave={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = "var(--border-subtle)"; el.style.color = "var(--text-secondary)"; }}>
+                      <ExternalLink size={14} /> Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

@@ -141,7 +141,7 @@ export function Hero() {
                 onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.transform = ""; (e.currentTarget as HTMLButtonElement).style.boxShadow = ""; }}>
                 View My Work
               </button>
-              <a href="/resume.pdf" download
+              <a href="/Kanak-Paliwal-Portfolio/Kanak Resume.pdf" download
                 style={{ borderRadius: "8px", padding: "0.8rem 1.8rem", color: "var(--text-primary)", fontFamily: "var(--font-body)",
                   fontSize: "0.95rem", fontWeight: 600, cursor: "pointer", textDecoration: "none",
                   background: "transparent", border: "2px solid #6c63ff", transition: "transform 0.2s, box-shadow 0.2s", display: "inline-block" }}
