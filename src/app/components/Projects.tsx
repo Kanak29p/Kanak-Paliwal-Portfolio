@@ -33,8 +33,8 @@ const PROJECTS = [
       "AWS",
       "Nginx"
     ],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/Kanak29p/Exam-Prep-Platform",
+    // demo: "#",
   },
   {
     id: 2,
@@ -58,7 +58,7 @@ const PROJECTS = [
       "HTML",
       "CSS"
     ],
-    github: "#",
+    github: "https://github.com/Kanak29p/Kanak29p-AI-Powered-Content-Automation-Platform",
     demo: "#",
   },
   {
@@ -82,7 +82,7 @@ const PROJECTS = [
       "Node.js",
       "GitHub"
     ],
-    github: "#",
+    github: "https://github.com/Kanak29p/Web-App-deployment-using-Nginx-and-MySQL",
   },
 ];
 

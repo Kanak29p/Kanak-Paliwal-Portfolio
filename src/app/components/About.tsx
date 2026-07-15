@@ -1,9 +1,9 @@
 import { useIntersectionObserver } from "./useIntersectionObserver";
 
 const STATS = [
-  { number: "9.26", label: "CGPA" },
+  { number: "9.34", label: "CGPA" },
   { number: "1", label: "Internship" },
-  { number: "5", label: "Projects" },
+  { number: "3", label: "Projects" },
 ];
 
 export function About() {
